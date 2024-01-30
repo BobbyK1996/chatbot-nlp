@@ -327,6 +327,26 @@
           },
           {
             "answer": "Hey there"
+          },
+          {
+            "answer": "Waddup boo"
+          }
+        ],
+        "greetings.bye": [
+          {
+            "answer": "Cya"
+          },
+          {
+            "answer": "See you soon"
+          },
+          {
+            "answer": "Until next time"
+          },
+          {
+            "answer": "goodbye"
+          },
+          {
+            "answer": "later"
           }
         ]
       }

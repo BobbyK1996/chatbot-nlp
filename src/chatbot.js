@@ -1,6 +1,8 @@
 // @ts-nocheck
 import { NlpManager } from 'node-nlp';
+import express from 'express';
 
+const app = express();
 //Instantiate NlpManager
 const manager = new NlpManager({ languages: ['en'] });
 
@@ -22,6 +24,7 @@ manager.addAnswer('en', 'greeting', 'Hey!');
 manager.addAnswer('en', 'greeting', 'Hi');
 manager.addAnswer('en', 'greeting', 'Hiya');
 manager.addAnswer('en', 'greeting', 'Hey there');
+manager.addAnswer('en', 'greeting', 'Waddup boo');
 manager.addAnswer('en', 'greetings.bye', 'Cya');
 manager.addAnswer('en', 'greetings.bye', 'See you soon');
 manager.addAnswer('en', 'greetings.bye', 'Until next time');
@@ -33,10 +36,20 @@ const trainAndSave = async () => {
   try {
     await manager.train();
     manager.save();
-    const response = await manager.process('en', 'hey sir');
-    console.log(response);
-  } catch (er) {
-    console.error(er);
+
+    // Route and Handler
+    app.get('/bot', async (req, res) => {
+      const response = await manager.process('en', req.query.message || '');
+      res.send(
+        response.answer || "Sorry, I didn't understand that. Please rephrase "
+      );
+    });
+
+    app.listen(3000, () => {
+      console.log('Server is running on port 3000');
+    });
+  } catch (error) {
+    console.error(error);
   }
 };
 
