@@ -1,1 +1,342 @@
-{"settings":{"languages":["en"],"tag":"nlp","threshold":0.5,"autoLoad":true,"autoSave":true,"modelFileName":"model.nlp","executeActionsBeforeAnswers":false,"calculateSentiment":true},"nluManager":{"settings":{"tag":"nlu-manager"},"locales":["en"],"languageNames":{},"domainManagers":{"en":{"settings":{"locale":"en","trainByDomain":false,"tag":"domain-manager-en","nluByDomain":{"default":{"className":"NeuralNlu","settings":{}}},"useStemDict":true},"stemDict":{"is,name,what,your":{"intent":"bot.name","domain":"default"},"is,locat,where,your":{"intent":"bot.location","domain":"default"},"is,purpos,what,your":{"intent":"bot.purpose","domain":"default"}},"intentDict":{"bot.name":"default","bot.location":"default","bot.purpose":"default"},"sentences":[{"domain":"default","utterance":"What is your name","intent":"bot.name"},{"domain":"default","utterance":"Where is your location","intent":"bot.location"},{"domain":"default","utterance":"What is your purpose","intent":"bot.purpose"}],"domains":{"master_domain":{"settings":{"locale":"en","tag":"nlu-en","keepStopwords":true,"nonefeatureValue":1,"nonedeltaMultiplier":1.2,"spellCheck":false,"spellCheckDistance":1,"filterZeros":true,"log":true},"features":{"what":1,"is":1,"your":1,"name":1,"where":1,"locat":1,"purpos":1},"intents":{"bot.name":1,"bot.location":1,"bot.purpose":1},"intentFeatures":{"bot.name":{"what":1,"is":1,"your":1,"name":1},"bot.location":{"where":1,"is":1,"your":1,"locat":1},"bot.purpose":{"what":1,"is":1,"your":1,"purpos":1}},"featuresToIntent":{"what":["bot.name","bot.purpose"],"is":["bot.name","bot.location","bot.purpose"],"your":["bot.name","bot.location","bot.purpose"],"name":["bot.name"],"where":["bot.location"],"locat":["bot.location"],"purpos":["bot.purpose"]},"neuralNetwork":{"settings":{"locale":"en","tag":"nlu-en","keepStopwords":true,"nonefeatureValue":1,"nonedeltaMultiplier":1.2,"spellCheck":false,"spellCheckDistance":1,"filterZeros":true,"log":true},"features":["what","is","your","name","where","locat","purpos"],"intents":["bot.name","bot.location","bot.purpose"],"perceptrons":[[2.749863624572754,1.2042627334594727,1.2042627334594727,8.391083717346191,-1.5423763990402222,-1.5423763990402222,-5.645680904388428,0.6002413924992563],[-3.047999143600464,1.819929599761963,1.819929599761963,-1.501788854598999,4.867930889129639,4.867930889129639,-1.5429993867874146,0.9099653525714372],[2.73637318611145,1.2183606624603271,1.2183606624603271,-5.645529747009277,-1.5165849924087524,-1.5165849924087524,8.386434555053711,0.6116949284097319]]}}}}},"intentDomains":{},"extraSentences":[["en","What is your name"],["en","Where is your location"],["en","What is your purpose"]]},"ner":{"settings":{"tag":"ner","entityPreffix":"%","entitySuffix":"%"},"rules":{}},"nlgManager":{"settings":{"tag":"nlg-manager"},"responses":{}},"actionManager":{"settings":{"tag":"action-manager"},"actions":{}},"slotManager":{}}
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hiya": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "yo": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "good,morn": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "morn": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "afternoon,good": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "afternoon": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "even,good": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "even": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "day,good": {
+            "intent": "greeting",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greeting": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hiya",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "yo",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "good morning",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "morning",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "good afternoon",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "afternoon",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "good evening",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "evening",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "good day",
+            "intent": "greeting"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hello": 1,
+              "hi": 1,
+              "hiya": 1,
+              "yo": 1,
+              "good": 1,
+              "morn": 1,
+              "afternoon": 1,
+              "even": 1,
+              "day": 1
+            },
+            "intents": {
+              "greeting": 1
+            },
+            "intentFeatures": {
+              "greeting": {
+                "hello": 1,
+                "hi": 1,
+                "hiya": 1,
+                "yo": 1,
+                "good": 1,
+                "morn": 1,
+                "afternoon": 1,
+                "even": 1,
+                "day": 1
+              }
+            },
+            "featuresToIntent": {
+              "hello": [
+                "greeting"
+              ],
+              "hi": [
+                "greeting"
+              ],
+              "hiya": [
+                "greeting"
+              ],
+              "yo": [
+                "greeting"
+              ],
+              "good": [
+                "greeting"
+              ],
+              "morn": [
+                "greeting"
+              ],
+              "afternoon": [
+                "greeting"
+              ],
+              "even": [
+                "greeting"
+              ],
+              "day": [
+                "greeting"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hi",
+                "hiya",
+                "yo",
+                "good",
+                "morn",
+                "afternoon",
+                "even",
+                "day"
+              ],
+              "intents": [
+                "greeting"
+              ],
+              "perceptrons": [
+                [
+                  2.9439117908477783,
+                  2.957731246948242,
+                  2.959146738052368,
+                  2.960235834121704,
+                  0.2083866447210312,
+                  2.7934398651123047,
+                  2.793097496032715,
+                  2.794567346572876,
+                  2.554837942123413,
+                  11.383064843900195
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hiya"
+      ],
+      [
+        "en",
+        "yo"
+      ],
+      [
+        "en",
+        "good morning"
+      ],
+      [
+        "en",
+        "morning"
+      ],
+      [
+        "en",
+        "good afternoon"
+      ],
+      [
+        "en",
+        "afternoon"
+      ],
+      [
+        "en",
+        "good evening"
+      ],
+      [
+        "en",
+        "evening"
+      ],
+      [
+        "en",
+        "good day"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greeting": [
+          {
+            "answer": "Hey!"
+          },
+          {
+            "answer": "Hi"
+          },
+          {
+            "answer": "Hiya"
+          },
+          {
+            "answer": "Hey there"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
